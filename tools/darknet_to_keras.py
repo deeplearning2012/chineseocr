@@ -9,7 +9,7 @@ import configparser
 
 
 import numpy as np
-from keras import backend as K
+from tensorflow.compat.v1.keras import backend as K
 from keras.layers import (Conv2D, Input, ZeroPadding2D, Add,
                           UpSampling2D, MaxPooling2D, Concatenate)
 from keras.layers.advanced_activations import LeakyReLU

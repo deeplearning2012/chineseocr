@@ -9,7 +9,7 @@ keras to pd for opencv dnn
 
 import tensorflow as tf
 import os 
-from keras import backend as K
+from tensorflow.compat.v1.keras import backend as K
 from tensorflow.python.framework import graph_util,graph_io
 def keras_to_pb(kerasmodel,outputDir,modelName='model.pd',outName = "output_"):
     if not os.path.exists(outputDir):

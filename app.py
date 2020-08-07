@@ -23,7 +23,7 @@ if yoloTextFlag =='keras' or AngleModelFlag=='tf' or ocrFlag=='keras':
     if GPU:
         os.environ["CUDA_VISIBLE_DEVICES"] = str(GPUID)
         import tensorflow as tf
-        from keras import backend as K
+        from tensorflow.compat.v1.keras import backend as K
         config = tf.compat.v1.ConfigProto()
         config.gpu_options.allocator_type = 'BFC'
         config.gpu_options.per_process_gpu_memory_fraction = 0.3## GPU最大占用量
