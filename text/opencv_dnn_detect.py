@@ -11,7 +11,7 @@ if AngleModelFlag=='tf':
     import tensorflow as tf
     from tensorflow.python.platform import gfile
     config = tf.compat.v1.ConfigProto(allow_soft_placement=True)
-    sess = tf.Session(config=config)
+    sess = tf.compat.v1.Session(config=config)
     with gfile.FastGFile(AngleModelPb, 'rb') as f:
             graph_def = tf.GraphDef()
             graph_def.ParseFromString(f.read())

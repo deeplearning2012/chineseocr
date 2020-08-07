@@ -28,7 +28,7 @@ if yoloTextFlag =='keras' or AngleModelFlag=='tf' or ocrFlag=='keras':
         config.gpu_options.allocator_type = 'BFC'
         config.gpu_options.per_process_gpu_memory_fraction = 0.3## GPU最大占用量
         config.gpu_options.allow_growth = True##GPU是否可动态增加
-        K.set_session(tf.Session(config=config))
+        K.set_session(tf.compat.v1.Session(config=config))
         K.get_session().run(tf.global_variables_initializer())
     
     else:
