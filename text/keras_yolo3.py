@@ -275,7 +275,8 @@ def box_layer(inputs,anchors,num_classes):
                         box_maxes[..., 0:1], # xmax
                         box_maxes[..., 1:2]  # ymax
                     ],axis=-1)
-        
+
+        print(box)
         box = K.reshape(box, [-1, 4])
         
         boxes.append(box)
