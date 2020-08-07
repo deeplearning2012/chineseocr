@@ -19,7 +19,7 @@ if ocrFlag=='keras':
         config.gpu_options.per_process_gpu_memory_fraction = 0.1## GPU最大占用量
         config.gpu_options.allow_growth = True##GPU是否可动态增加
         K.set_session(tf.compat.v1.Session(config=config))
-        K.get_session().run(tf.global_variables_initializer())
+        K.get_session().run(tf.compat.v1.global_variables_initializer())
 
     else:
         ##CPU启动

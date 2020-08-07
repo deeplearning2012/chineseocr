@@ -212,7 +212,7 @@ class WeightSaver(object):
     def __init__(self,textModel,output_path):
         self.model = textModel
         self.sess = K.get_session()
-        #self.sess.run(K.tf.global_variables_initializer())
+        #self.sess.run(K.tf.compat.v1.global_variables_initializer())
         self.layers = {weight.name:weight for weight in self.model.weights}
         self.fhandle = open(output_path,'wb')
         self._write_head()
