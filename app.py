@@ -24,7 +24,7 @@ if yoloTextFlag =='keras' or AngleModelFlag=='tf' or ocrFlag=='keras':
         os.environ["CUDA_VISIBLE_DEVICES"] = str(GPUID)
         import tensorflow as tf
         from keras import backend as K
-        config = tf.ConfigProto()
+        config = tf.compat.v1.ConfigProto()
         config.gpu_options.allocator_type = 'BFC'
         config.gpu_options.per_process_gpu_memory_fraction = 0.3## GPU最大占用量
         config.gpu_options.allow_growth = True##GPU是否可动态增加

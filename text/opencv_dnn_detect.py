@@ -10,7 +10,7 @@ if AngleModelFlag=='tf':
     ##转换为tf模型，以便GPU调用
     import tensorflow as tf
     from tensorflow.python.platform import gfile
-    config = tf.ConfigProto(allow_soft_placement=True)
+    config = tf.compat.v1.ConfigProto(allow_soft_placement=True)
     sess = tf.Session(config=config)
     with gfile.FastGFile(AngleModelPb, 'rb') as f:
             graph_def = tf.GraphDef()
