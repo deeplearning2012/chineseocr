@@ -281,7 +281,8 @@ def box_layer(inputs,anchors,num_classes):
         boxes.append(box)
         
         scores.append(box_score)
-        
+
+    print(boxes)
     boxes  = concatenate(boxes, axis=0)
     scores = concatenate(scores, axis=0)
     
