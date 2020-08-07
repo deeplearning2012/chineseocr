@@ -14,6 +14,8 @@ if ocrFlag=='keras':
         os.environ["CUDA_VISIBLE_DEVICES"] = str(GPUID)
         import tensorflow as tf
         from tensorflow.compat.v1.keras import backend as K
+
+        tf.compat.v1.disable_eager_execution()
         config = tf.compat.v1.ConfigProto()
         config.gpu_options.allocator_type = 'BFC'
         config.gpu_options.per_process_gpu_memory_fraction = 0.1## GPU最大占用量
