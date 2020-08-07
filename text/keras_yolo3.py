@@ -19,7 +19,7 @@ from keras.regularizers import l2
 from keras.layers import Lambda
 from keras.layers import concatenate
 """
-K                  = tf.keras.backend
+K                  = tf.compat.v1.keras.backend
 Conv2D             = tf.keras.layers.Conv2D
 Add                = tf.keras.layers.Add
 ZeroPadding2D      = tf.keras.layers.ZeroPadding2D
