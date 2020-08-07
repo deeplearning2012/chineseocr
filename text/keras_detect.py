@@ -11,8 +11,8 @@ from PIL import Image
 import numpy as np
 import tensorflow as tf
 
-graph = tf.get_default_graph()##解决web.py 相关报错问题
 tf.compat.v1.disable_eager_execution()
+graph = tf.compat.v1.get_default_graph()##解决web.py 相关报错问题
 anchors = [float(x) for x in keras_anchors.split(',')]
 anchors = np.array(anchors).reshape(-1, 2)
 num_anchors = len(anchors)

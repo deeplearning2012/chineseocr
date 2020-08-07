@@ -12,7 +12,7 @@ from keras.activations import relu
 from crnn.util import resizeNormalize ,strLabelConverter
 import numpy as np
 import tensorflow as tf
-graph = tf.get_default_graph()##解决web.py 相关报错问题
+graph = tf.compat.v1.get_default_graph()##解决web.py 相关报错问题
 def keras_crnn(imgH, nc, nclass, nh, leakyRelu=False,lstmFlag=True):
     """
     keras crnn
