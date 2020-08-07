@@ -10,6 +10,8 @@ if AngleModelFlag=='tf':
     ##转换为tf模型，以便GPU调用
     import tensorflow as tf
     from tensorflow.python.platform import gfile
+
+    tf.compat.v1.disable_eager_execution()
     config = tf.compat.v1.ConfigProto(allow_soft_placement=True)
     sess = tf.compat.v1.Session(config=config)
     with gfile.FastGFile(AngleModelPb, 'rb') as f:
