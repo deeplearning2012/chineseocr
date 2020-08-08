@@ -3,7 +3,7 @@ MAINTAINER https://github.com/chineseocr/chineseocr
 LABEL version="1.0"
 EXPOSE 8080
 RUN apt-get update
-RUN apt-get install  libsm6 libxrender1 libxext-dev gcc -y
+RUN apt-get install apt-utils libsm6 libxrender1 libxext-dev gcc -y
 ##下载Anaconda3 python 环境安装包 放置在chineseocr目录 url地址https://repo.anaconda.com/archive/Anaconda3-2019.03-Linux-x86_64.sh
 WORKDIR /chineseocr
 ADD . /chineseocr
